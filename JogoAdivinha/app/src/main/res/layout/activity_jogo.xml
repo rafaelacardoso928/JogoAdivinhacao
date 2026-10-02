@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    tools:context=".JogoActivity">
+
+    ```
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🎯 JOGO DE ADIVINHAÇÃO"
+        android:textColor="#263238"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Mensagem de boas-vindas -->
+    <TextView
+        android:id="@+id/txtBoasVindas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Olá! Pensei em um número."
+        android:textColor="#546E7A"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Instrução -->
+    <TextView
+        android:id="@+id/txtPalpite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Qual é o seu palpite?"
+        android:textColor="#263238"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txtBoasVindas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Campo do palpite -->
+    <EditText
+        android:id="@+id/edtPalpite"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Digite um número"
+        android:inputType="number"
+        android:textSize="22sp"
+        android:textColor="#263238"
+        android:textColorHint="#90A4AE"
+        android:gravity="center"
+        android:backgroundTint="#3F51B5"
+        app:layout_constraintTop_toBottomOf="@id/txtPalpite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp" />
+
+    <!-- Botão chutar -->
+    <Button
+        android:id="@+id/btnChutar"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="CHUTAR 🎯"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3F51B5"
+        app:layout_constraintTop_toBottomOf="@id/edtPalpite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp" />
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#263238"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btnChutar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Contador -->
+    <TextView
+        android:id="@+id/txtTentativas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tentativas: 0"
+        android:textColor="#546E7A"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txtResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <!-- Jogar novamente -->
+    <Button
+        android:id="@+id/btnJogarNovamente"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="JOGAR DE NOVO 🔄"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00897B"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/txtTentativas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp" />
+    ```
+
+</androidx.constraintlayout.widget.ConstraintLayout>
